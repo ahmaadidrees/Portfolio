@@ -1,0 +1,8 @@
+.nav-title{
+    font-size: 30px;
+}
+@media (max-width: 323px) {
+    .nav-title{
+        font-size: 7.25vw;
+    }
+}
