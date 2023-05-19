@@ -30,7 +30,7 @@ const projects = [
     id: 3,
     title: 'Kade\'s Kloset',
     description: 'This is a fullstack clothing store, I used the commerce.js api to handle clothing store functionality, and the stripe api to handle payments in the backend. The website owner currently does not use it but please still check it out :) ',
-    tags: ['react', 'stripe','commerce.js'],
+    tags: ['react','express','node.js', 'stripe','commerce.js'],
     image: '/images/kadeskloset.png',
     link: 'https://www.thekadeskloset.com/',
   },

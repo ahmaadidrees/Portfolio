@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { BiDesktop, BiMobileAlt } from 'react-icons/bi';
 import { FaLaptopCode } from 'react-icons/fa';
 import './Service.css';
+import { Link } from 'react-router-dom';
 
 function Services({ isDarkMode }) {
   return (
@@ -23,7 +24,9 @@ function Services({ isDarkMode }) {
           <p style={{ color: isDarkMode ? 'white' : 'black' }} className="services-text">Web Application Design/Development</p>
         </Col>
       </Row>
-      <Button variant="primary" className="services-button">Learn More</Button>
+      <Button as= {Link} to= '/services' onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }} variant="primary" className="services-button">Learn More</Button>
       </div>
     </Container>
   );

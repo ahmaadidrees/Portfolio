@@ -1,8 +1,15 @@
-.nav-title{
+.nav-title {
     font-size: 30px;
-}
-@media (max-width: 323px) {
-    .nav-title{
-        font-size: 7.25vw;
+  }
+  
+  @media (max-width: 323px) {
+    .nav-title {
+      font-size: 7.25vw;
     }
+  }
+  
+  .navbar-toggler.active,
+.navbar-toggler-icon.active {
+  outline: none;
+  box-shadow: none;
 }

@@ -26,13 +26,13 @@
         top: 200px;
     }
 }
-@media (max-height: 900px ){
+@media (max-height: 1130px ){
     .hero-content{
         position: relative;
         top: 120px;
     }
 }
-@media (min-height: 901px){
+@media (min-height: 1131px){
     .hero-content{
     position: relative;
     top: 300px;

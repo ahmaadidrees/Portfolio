@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './Hero.css';
+import { Link } from 'react-router-dom';
 
 function Hero({ isDarkMode }) {
   const titles = ['Problem Solver', 'Web Developer', 'Software Engineer'];
@@ -66,7 +67,9 @@ function Hero({ isDarkMode }) {
           {title}<span style={{ opacity: showBlink ? 1 : 0 }}>|</span> {/* Add opacity based on showBlink */}
         </h1>
         <p style={{ color: isDarkMode ? 'white' : 'black' }} className="hero-subtitle">I design and implement technical solutions</p>
-        <Button variant="primary" className="hero-button">Contact Me Today</Button>
+        <Button as={Link} to='/contact' onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }} variant="primary" className="hero-button">Contact Me Today</Button>
         <img
           src={!isDarkMode ? "/images/BlackLogo.png" : '/images/WhiteLogo.png'}
           alt="Hero"
