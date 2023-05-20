@@ -1,8 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
-import ServicePage from './pages/ServicePage';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Details from './components/Details';
@@ -10,6 +9,15 @@ import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -20,6 +28,7 @@ function App() {
   };
   return (
     <Router>
+       <ScrollToTop />
       <div className="App" style={{background: isDarkMode ? "#343A40" : "white" }}>
         <NavBar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
